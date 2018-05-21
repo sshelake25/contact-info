@@ -1,0 +1,3 @@
+tr {display: block; }
+th, td { width: 300px; }
+tbody { display: block; height: 450px; overflow: auto;} 

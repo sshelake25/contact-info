@@ -1,0 +1,28 @@
+<br/>
+<h2 class="text-center">List of Contact</h2>
+<br/>
+<table class="table table-sm table-hover">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone No</th>
+    <th>Status</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr *ngFor="let contact of contactList">
+    <td>{{contact.firstName}}</td>
+    <td>{{contact.lastName}}</td>
+    <td>{{contact.email}}</td>
+    <td>{{contact.phoneNo}}</td>
+    <td>{{contact.status ? 'Active' : 'Inactive'}}</td>
+    <td>
+      <a class="btn" (click)="onEdit(contact)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn" (click)="onDelete(contact.$key)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
